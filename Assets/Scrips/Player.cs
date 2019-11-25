@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon;
+using UnityEngine.UI;
 
 public class Player : Photon.PunBehaviour
 {
     float dirX, dirY;
     public TextMesh text;
     public GameObject BombPrefab;
-    public float Health;
+    private float Health;
     public static Player instance;
+    public Text HpDisplay;
     private void Awake()
     {
         MakeInstance();
@@ -35,6 +37,7 @@ public class Player : Photon.PunBehaviour
     void Update()
     {
         Debug.Log("hp :"+Health);
+        HpDisplay.GetComponentInParent<Text>().text = "HP PLAYER : " + Health.ToString();
 
         if (photonView.isMine)
         {
@@ -51,6 +54,35 @@ public class Player : Photon.PunBehaviour
         else
         {
 
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "bom")
+        {
+            if (photonView.isMine)
+            {
+                photonView.RPC("Damge", PhotonTargets.All);
+            }
+        }
+    }
+
+    [PunRPC]
+    void Damge()
+    {
+        Health -= 5;
+    }
+
+    public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.isWriting)
+        {
+            stream.SendNext(Health);
+        }else if(stream.isReading)
+        {
+            Health = (float)stream.ReceiveNext();
         }
     }
 

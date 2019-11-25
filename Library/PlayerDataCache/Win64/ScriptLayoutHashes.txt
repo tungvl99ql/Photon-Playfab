@@ -104,8 +104,9 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnClickFlashRpc
 8eb24bece85e7a82336cce68fe34fd3f Assembly-CSharp.dll:.DemoRPGMovement
-f9b42e99e08396d008220f008c0ec6b6 Assembly-CSharp.dll:.Player
+c700f2171eb17d7d6f7c5dcb3065c7d8 Assembly-CSharp.dll:.Player
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:ExitGames.Demos.ToDemoHubButton
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.boomEF
 dfd7a2ae89b53ee12027e54728efd088 Assembly-CSharp.dll:.PhotonHandler
 55527c4ad510392679c5e9356f5ac24b Assembly-CSharp.dll:.GUIFriendsInRoom
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnClickDisableObj
@@ -246,8 +247,7 @@ d1f07c9e64b7817e6271f80bb03de25f Assembly-CSharp.dll:ExitGames.Demos.DemoAnimato
 fee10f065bb8577dc41837e92d083eaf Assembly-CSharp.dll:.WorkerMenu
 01d2cc2ff6083f7e05ba20bf455a26bc Assembly-CSharp.dll:.MpManager
 e1b8eaae6a90f88343f8be6d517488f6 Assembly-CSharp.dll:.PhotonView
+2491262554149729c9f552a131e43b65 Assembly-CSharp.dll:.bomb
 6e40df0640db68ace23b58a832a9da7a Assembly-CSharp.dll:.InRoomChat
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ClickDetector
 e7e6571fb792bd5234807be154062d6f Assembly-CSharp.dll:.CubeExtra
-2491262554149729c9f552a131e43b65 Assembly-CSharp.dll:.bomb
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.boomEF

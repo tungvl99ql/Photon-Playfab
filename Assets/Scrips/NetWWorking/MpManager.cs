@@ -17,21 +17,19 @@ public class MpManager : Photon.MonoBehaviour
     public GameObject[] DisalbeOnJoinedRoom;
     public GameObject playerPrefab1, playerPrefab2;
     public int changePlayerSkin ;
+   
 
     private void Awake()
     {
         MakeInstance();
     }
 
-    private void Update()
-    {
-        Debug.Log(changePlayerSkin);
-    }
+   
     private void FixedUpdate()
     {
         ConnectState.text = PhotonNetwork.connectionStateDetailed.ToString();
     }
-
+   
     public void ConnectToMaster()
     {
         PhotonNetwork.ConnectUsingSettings(gameversion);
@@ -80,8 +78,6 @@ public class MpManager : Photon.MonoBehaviour
             {
                 PhotonNetwork.Instantiate(this.playerPrefab2.name, Vector3.zero, Quaternion.identity, 0);
             }
-
-
         PlayfabAuth.instance.GetAccountInfo();
     }
 

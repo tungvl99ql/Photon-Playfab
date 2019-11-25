@@ -11,31 +11,6 @@ public class boomEF : Photon.PunBehaviour
         Destroy(this.gameObject, 0.3f);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            Player.instance.Health -= 5;
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       if(collision.gameObject.CompareTag("Player"))
-        {
-            Player.instance.Health -= 5;
-            Debug.Log(collision.gameObject.tag);
-        }
-    }
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (photonView.isMine)
-    //    {
-    //        if (other.gameObject.tag == "Player")
-    //        {
-    //            Player.instance.Health -= 5;
-    //            Debug.Log("detected :" + other.tag);
-    //        }
-    //    }
-    //}
+    
 
 }
